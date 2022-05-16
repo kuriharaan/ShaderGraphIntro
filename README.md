@@ -9,5 +9,6 @@ Shader Graph を用いることでコーディングをしなくても、
 # 導入
 Unityのプロジェクトを作成する場合はURPまたはHDRPのテンプレートから作成するとShader Graph が使えます。
 （もしくはUnity 2021.2以降であれば従来のBuild-inパイプラインでも使用可能となりました）
+画像は2019.4 LTS でUnity Hub から新規プロジェクトを作成する場合です。
 ![image](https://user-images.githubusercontent.com/1992059/168628228-20773d83-c55a-4e53-833d-78e5f05e76ad.png)
 
