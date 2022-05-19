@@ -62,4 +62,36 @@ Hatシェーダが作られました。
 
 # テクスチャマッピング
 
+自作のシェーダでヘルメットにテクスチャを貼ってみましょう。
+もともとヘルメットに設定されていたテクスチャは以下のパスに有ります。
+Assets/ExampleAssets/Textures/Props/HardHat/SafetyHat_Albedo.tif
+
+一連の操作は次のようになります。アニメの↓に解説
+![shader_graph_texture_mapping](https://user-images.githubusercontent.com/1992059/169172842-b9816a3f-ad83-4717-9cbe-2c4ca4932a91.gif)
+
+"Hat"シェーダをダブルクリックして Shader Graph の画面を開きます。
+空いているところを右クリックするとメニューが出ますので[Create Node]を選択します。
+ここからShader Graphで使用できる色々なノードが選択できますが、
+今回は"Sample Texture 2D"というテクスチャ画像を読み込むノードを使います。
+キーボードで"Text"まで打ち込むとノード名から絞り込みがされて数種のノードだけになるので、
+"Sample Texture 2D"を選択します。
+ノードの左側に　Texture(T2)と書かれているところに接続されているフィールドが使用するテクスチャになります。
+そこをクリックするとプロジェクト内のテクスチャから選択できる"Select Texture"画面が開きます。
+ここも"Hat"とキーボードで打ち込むと絞り込みが出来ますので、
+黄色いヘルメットのテクスチャSafetyHat_Albedo.tif　を選択します。
+![227](https://user-images.githubusercontent.com/1992059/169174246-70ce3a8b-0bdb-4d8d-9cd4-6aefe22eb1a7.png)
+これでテクスチャを読み込むノードの設定は出来ました。
+
+"Sample Texture 2D"ノードのRGBA(4)と "PBR Master"ノードのAlbedo(3)という箇所を接続するとシェーダの出力カラーがテクスチャカラーになります。
+"PBR Master"ノードはシェーダの最終出力先のノードになります。
+"Sample Texture 2D"ノードのRGBA(4)のところの小さな丸のところからドラッグして線をのばし、
+"PBR Master"ノードのAlbedo(3)の丸のところに接続します。
+![301](https://user-images.githubusercontent.com/1992059/169174542-d4eb29fe-dd2f-48ea-9eb0-1d538523d0fa.png)
+
+これでテクスチャを使ったシェーダは完成しました。
+Shader Graph画面左上の"Save Asset"ボタンをクリックしてシェーダを保存し反映させます。
+
+Unityのシーンビューに戻るとヘルメットに黄色いテクスチャが適用されている状態になります。
+
+
 # 簡単なカラー効果
