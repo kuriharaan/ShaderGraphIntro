@@ -3,6 +3,8 @@ ShaderGraph導入
 
 Shader Graph はノードの接続しグラフを作ることでシェーダを作成することができる
 Unity標準のグラフィックツールです。  
+公式サイト https://unity.com/ja/features/shader-graph
+
 Shader Graph を用いることでコーディングをしなくても、 
 多彩な表現のシェーダを作成することが可能になります。  
 
